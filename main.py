@@ -15,6 +15,8 @@ boundaries = [
 	([0, 88, 111], [97, 255, 255]),
 ]
 # loop over the boundaries
+
+i = 0
 for (lower, upper) in boundaries:
 	# create NumPy arrays from the boundaries
 	lower = np.array(lower, dtype = "uint8")
@@ -27,4 +29,9 @@ for (lower, upper) in boundaries:
  
 	# show the images
 	cv2.imshow("imagenes", np.hstack([image, output]))
+	if i == 0 :
+		cv2.imwrite("rojo.jpg",output)
+	else:
+		cv2.imwrite("amarillo.jpg",output)
+	i+=1
 	cv2.waitKey(0)
