@@ -12,7 +12,7 @@ image = cv2.imread(args["image"])
 # define the list of boundaries
 boundaries = [
 	([0, 0, 80], [201, 39, 255]),
-	([0, 88, 111], [97, 255, 255]),
+	([0, 88, 111], [85, 255, 255]),
 ]
 # loop over the boundaries
 
